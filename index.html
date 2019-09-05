@@ -364,7 +364,7 @@ console.log(insertSort(array));
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/05/My-New-Post/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/05/mergeSort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChenHui">
@@ -383,7 +383,7 @@ console.log(insertSort(array));
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/09/05/My-New-Post/" itemprop="url">My New Post</a></h1>
+                <a class="post-title-link" href="/2019/09/05/mergeSort/" itemprop="url">My New Post</a></h1>
         
 
         <div class="post-meta">
@@ -435,7 +435,43 @@ console.log(insertSort(array));
       
         
           
-            
+            <h1 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h1><h3 id="1-递归的将数组两两分开直到最多包含两个元素，然后将数组排序合并，最终合并为排序好的数组"><a href="#1-递归的将数组两两分开直到最多包含两个元素，然后将数组排序合并，最终合并为排序好的数组" class="headerlink" title="1.递归的将数组两两分开直到最多包含两个元素，然后将数组排序合并，最终合并为排序好的数组"></a>1.递归的将数组两两分开直到最多包含两个元素，然后将数组排序合并，最终合并为排序好的数组</h3><pre><code>function sort(array) {
+      mergeSort(array, 0, array.length - 1);
+      return array;
+}
+
+function mergeSort(array, left, right) {
+      // 左右索引相同说明已经只有一个数
+      if (left === right) return;
+      // 等同于 `left + (right - left) / 2`
+      // 相比 `(left + right) / 2` 来说更加安全，不会溢出
+      // 使用位运算是因为位运算比四则运算快
+      let mid = parseInt(left + ((right - left) &gt;&gt; 1));
+      mergeSort(array, left, mid);
+      mergeSort(array, mid + 1, right);
+
+      let help = [];
+      let i = 0;
+      let p1 = left;
+      let p2 = mid + 1;
+      while (p1 &lt;= mid &amp;&amp; p2 &lt;= right) {
+        help[i++] = array[p1] &lt; array[p2] ? array[p1++] : array[p2++];
+      }
+      while (p1 &lt;= mid) {
+        help[i++] = array[p1++];
+      }
+      while (p2 &lt;= right) {
+        help[i++] = array[p2++];
+      }
+      for (let i = 0; i &lt; help.length; i++) {
+        array[left + i] = help[i];
+      }
+      return array;
+}
+
+let array=[60,45,37,5,48,15,37,26,29,2,46,4,17,50,52];//调用排序算法 
+console.log(sort(array));
+</code></pre>
           
         
       
@@ -483,7 +519,7 @@ console.log(insertSort(array));
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/05/InsertSort-0/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/05/quickSort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChenHui">
@@ -502,7 +538,7 @@ console.log(insertSort(array));
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/09/05/InsertSort-0/" itemprop="url">InsertSort</a></h1>
+                <a class="post-title-link" href="/2019/09/05/quickSort/" itemprop="url">selectionSort</a></h1>
         
 
         <div class="post-meta">
@@ -554,7 +590,196 @@ console.log(insertSort(array));
       
         
           
+            <pre><code>#快速排序
+// 随机选取一个数组中的值作为基准值，从左至右取值与基准值对比大小。
+// 比基准值小的放数组左边，大的放右边，对比完成后将基准值和第一个比基准值大的值交换位置。
+// 然后将数组以基准值的位置分为两部分，继续递归以上操作。
+function sort(array) {
+  quickSort(array, 0, array.length - 1);
+  return array;
+}
+
+function quickSort(array, left, right) {
+  if (left &lt; right) {
+    swap(array, left, right)
+    // 随机取值，然后和末尾交换，这样做比固定取一个位置的复杂度略低
+    let indexs = part(array, parseInt(Math.random() * (right - left + 1)) + left, right);
+    quickSort(array, left, indexs[0]);
+    quickSort(array, indexs[1] + 1, right);
+  }
+}
+function part(array, left, right) {
+  let less = left - 1;
+  let more = right;
+  while (left &lt; more) {
+    if (array[left] &lt; array[right]) {
+      // 当前值比基准值小，`less` 和 `left` 都加一
+       ++less;
+       ++left;
+    } else if (array[left] &gt; array[right]) {
+      // 当前值比基准值大，将当前值和右边的值交换
+      // 并且不改变 `left`，因为当前换过来的值还没有判断过大小
+      swap(array, --more, left);
+    } else {
+      // 和基准值相同，只移动下标
+      left++;
+    }
+  }
+  // 将基准值和比基准值大的第一个值交换位置
+  // 这样数组就变成 `[比基准值小, 基准值, 比基准值大]`
+  swap(array, right, more);
+  return [less, more];
+}
+function swap(array, i, j){
+    let temp=0;
+    temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+}
+
+let array=[60,45,37,5,48,15,37,26,29,2,46,4,17,50,52];//调用排序算法 
+console.log(sort (array));
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/05/selectionSort/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ChenHui">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/05/selectionSort/" itemprop="url">selectionSort</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
             
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-05T10:26:43+08:00">
+                2019-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>#选择排序</p>
+<h3 id="1-遍历数组，设置最小值的索引为0，如取出值比当前最小值小，就替换最小值索引，"><a href="#1-遍历数组，设置最小值的索引为0，如取出值比当前最小值小，就替换最小值索引，" class="headerlink" title="1.遍历数组，设置最小值的索引为0，如取出值比当前最小值小，就替换最小值索引，"></a>1.遍历数组，设置最小值的索引为0，如取出值比当前最小值小，就替换最小值索引，</h3><h3 id="遍历完后，将第一个元素和最小值索引上的值替换"><a href="#遍历完后，将第一个元素和最小值索引上的值替换" class="headerlink" title="遍历完后，将第一个元素和最小值索引上的值替换"></a>遍历完后，将第一个元素和最小值索引上的值替换</h3><h3 id="2-下次遍历从索引1开始重复上述操作"><a href="#2-下次遍历从索引1开始重复上述操作" class="headerlink" title="2.下次遍历从索引1开始重复上述操作"></a>2.下次遍历从索引1开始重复上述操作</h3><h3 id="O-n-n"><a href="#O-n-n" class="headerlink" title="O(n*n)"></a>O(n*n)</h3><pre><code>function selectionSort(array){
+    for(let i = 0; i &lt; array.length-1; i++){
+        let minIndex = i;
+        for(let j = i+1; j &lt; array.length; j++){
+            minIndex = (array[j] &lt; array[minIndex])? j : minIndex;
+        }
+        swap(array, i, minIndex);
+    }
+    return array;
+}
+
+function swap(array, i, j){
+    let temp=0;
+    temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+}
+
+let array=[60,45,37,5,48,15,37,26,29,2,46,4,17,50,52];//调用排序算法 
+console.log(selectionSort (array));
+</code></pre>
           
         
       
@@ -971,7 +1196,7 @@ console.log(insertSort(array));
       
         
           
-            <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><pre><code>public static void bubbleSort(int[] arr) {
+            <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><h3 id="1-从第一个元素开始，把当前元素和下一个索引元素进行比较。"><a href="#1-从第一个元素开始，把当前元素和下一个索引元素进行比较。" class="headerlink" title="1,从第一个元素开始，把当前元素和下一个索引元素进行比较。"></a>1,从第一个元素开始，把当前元素和下一个索引元素进行比较。</h3><h3 id="2-如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，"><a href="#2-如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，" class="headerlink" title="2,如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，"></a>2,如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，</h3><h3 id="那么此时最后一个元素就是该数组中最大的数。"><a href="#那么此时最后一个元素就是该数组中最大的数。" class="headerlink" title="那么此时最后一个元素就是该数组中最大的数。"></a>那么此时最后一个元素就是该数组中最大的数。</h3><h3 id="3-下一轮重复以上操作，但是此时最后一个元素已经是最大数了，"><a href="#3-下一轮重复以上操作，但是此时最后一个元素已经是最大数了，" class="headerlink" title="3,下一轮重复以上操作，但是此时最后一个元素已经是最大数了，"></a>3,下一轮重复以上操作，但是此时最后一个元素已经是最大数了，</h3><h3 id="所以不需要再比较最后一个元素，只需要比较到-length-1-的位置"><a href="#所以不需要再比较最后一个元素，只需要比较到-length-1-的位置" class="headerlink" title="所以不需要再比较最后一个元素，只需要比较到 length - 1 的位置"></a>所以不需要再比较最后一个元素，只需要比较到 length - 1 的位置</h3><h3 id="O-n-n"><a href="#O-n-n" class="headerlink" title="O(n*n)"></a>O(n*n)</h3><pre><code>public static void bubbleSort(int[] arr) {
     if (arr == null || arr.length &lt; 2) {
         return;
     }
@@ -983,12 +1208,31 @@ console.log(insertSort(array));
         }
     }
 }
-
 public static void swap(int[] arr, int i, int j) {
     arr[i] = arr[i] ^ arr[j];
     arr[j] = arr[i] ^ arr[j];
     arr[i] = arr[i] ^ arr[j];
 }
+
+
+function bubbleSort(array){
+for(let i=array.length; i&gt;0; i--){
+    for(let j=0; j&lt;i-1; j++){
+        if(array[j] &gt; array[j+1]){
+            swap(array, j, j+1);
+        }
+    }
+}
+return array;
+}
+function swap(array, i, j){
+    let temp=0;
+    temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+}
+let array=[60,45,37,5,48,15,37,26,29,2,46,4,17,50,52];//调用排序算法 
+console.log(bubbleSort(array));
 </code></pre>
           
         
@@ -1198,7 +1442,7 @@ public static void swap(int[] arr, int i, int j) {
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

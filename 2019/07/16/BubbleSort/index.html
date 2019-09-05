@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="冒泡排序public static void bubbleSort(int[] arr) {     if (arr == null || arr.length &amp;lt; 2) {         return;     }     for (int e = arr.length - 1; e &amp;gt; 0; e--) {         for (int i = 0; i &amp;lt; e; i++">
+<meta name="description" content="冒泡排序1,从第一个元素开始，把当前元素和下一个索引元素进行比较。2,如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，那么此时最后一个元素就是该数组中最大的数。3,下一轮重复以上操作，但是此时最后一个元素已经是最大数了，所以不需要再比较最后一个元素，只需要比较到 length - 1 的位置O(n*n)public static void bubbleSort(int[] arr)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BubbleSort">
 <meta property="og:url" content="http://yoursite.com/2019/07/16/BubbleSort/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="冒泡排序public static void bubbleSort(int[] arr) {     if (arr == null || arr.length &amp;lt; 2) {         return;     }     for (int e = arr.length - 1; e &amp;gt; 0; e--) {         for (int i = 0; i &amp;lt; e; i++">
+<meta property="og:description" content="冒泡排序1,从第一个元素开始，把当前元素和下一个索引元素进行比较。2,如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，那么此时最后一个元素就是该数组中最大的数。3,下一轮重复以上操作，但是此时最后一个元素已经是最大数了，所以不需要再比较最后一个元素，只需要比较到 length - 1 的位置O(n*n)public static void bubbleSort(int[] arr)">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-16T07:49:34.425Z">
+<meta property="og:updated_time" content="2019-09-05T02:35:10.027Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BubbleSort">
-<meta name="twitter:description" content="冒泡排序public static void bubbleSort(int[] arr) {     if (arr == null || arr.length &amp;lt; 2) {         return;     }     for (int e = arr.length - 1; e &amp;gt; 0; e--) {         for (int i = 0; i &amp;lt; e; i++">
+<meta name="twitter:description" content="冒泡排序1,从第一个元素开始，把当前元素和下一个索引元素进行比较。2,如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，那么此时最后一个元素就是该数组中最大的数。3,下一轮重复以上操作，但是此时最后一个元素已经是最大数了，所以不需要再比较最后一个元素，只需要比较到 length - 1 的位置O(n*n)public static void bubbleSort(int[] arr)">
 
 
 
@@ -299,7 +299,7 @@
       
 
       
-        <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><pre><code>public static void bubbleSort(int[] arr) {
+        <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><h3 id="1-从第一个元素开始，把当前元素和下一个索引元素进行比较。"><a href="#1-从第一个元素开始，把当前元素和下一个索引元素进行比较。" class="headerlink" title="1,从第一个元素开始，把当前元素和下一个索引元素进行比较。"></a>1,从第一个元素开始，把当前元素和下一个索引元素进行比较。</h3><h3 id="2-如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，"><a href="#2-如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，" class="headerlink" title="2,如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，"></a>2,如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，</h3><h3 id="那么此时最后一个元素就是该数组中最大的数。"><a href="#那么此时最后一个元素就是该数组中最大的数。" class="headerlink" title="那么此时最后一个元素就是该数组中最大的数。"></a>那么此时最后一个元素就是该数组中最大的数。</h3><h3 id="3-下一轮重复以上操作，但是此时最后一个元素已经是最大数了，"><a href="#3-下一轮重复以上操作，但是此时最后一个元素已经是最大数了，" class="headerlink" title="3,下一轮重复以上操作，但是此时最后一个元素已经是最大数了，"></a>3,下一轮重复以上操作，但是此时最后一个元素已经是最大数了，</h3><h3 id="所以不需要再比较最后一个元素，只需要比较到-length-1-的位置"><a href="#所以不需要再比较最后一个元素，只需要比较到-length-1-的位置" class="headerlink" title="所以不需要再比较最后一个元素，只需要比较到 length - 1 的位置"></a>所以不需要再比较最后一个元素，只需要比较到 length - 1 的位置</h3><h3 id="O-n-n"><a href="#O-n-n" class="headerlink" title="O(n*n)"></a>O(n*n)</h3><pre><code>public static void bubbleSort(int[] arr) {
     if (arr == null || arr.length &lt; 2) {
         return;
     }
@@ -311,12 +311,31 @@
         }
     }
 }
-
 public static void swap(int[] arr, int i, int j) {
     arr[i] = arr[i] ^ arr[j];
     arr[j] = arr[i] ^ arr[j];
     arr[i] = arr[i] ^ arr[j];
 }
+
+
+function bubbleSort(array){
+for(let i=array.length; i&gt;0; i--){
+    for(let j=0; j&lt;i-1; j++){
+        if(array[j] &gt; array[j+1]){
+            swap(array, j, j+1);
+        }
+    }
+}
+return array;
+}
+function swap(array, i, j){
+    let temp=0;
+    temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+}
+let array=[60,45,37,5,48,15,37,26,29,2,46,4,17,50,52];//调用排序算法 
+console.log(bubbleSort(array));
 </code></pre>
       
     </div>
@@ -430,7 +449,7 @@ public static void swap(int[] arr, int i, int j) {
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -467,7 +486,7 @@ public static void swap(int[] arr, int i, int j) {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#冒泡排序"><span class="nav-number">1.</span> <span class="nav-text">冒泡排序</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#冒泡排序"><span class="nav-number">1.</span> <span class="nav-text">冒泡排序</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-从第一个元素开始，把当前元素和下一个索引元素进行比较。"><span class="nav-number">1.0.1.</span> <span class="nav-text">1,从第一个元素开始，把当前元素和下一个索引元素进行比较。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，"><span class="nav-number">1.0.2.</span> <span class="nav-text">2,如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#那么此时最后一个元素就是该数组中最大的数。"><span class="nav-number">1.0.3.</span> <span class="nav-text">那么此时最后一个元素就是该数组中最大的数。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-下一轮重复以上操作，但是此时最后一个元素已经是最大数了，"><span class="nav-number">1.0.4.</span> <span class="nav-text">3,下一轮重复以上操作，但是此时最后一个元素已经是最大数了，</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#所以不需要再比较最后一个元素，只需要比较到-length-1-的位置"><span class="nav-number">1.0.5.</span> <span class="nav-text">所以不需要再比较最后一个元素，只需要比较到 length - 1 的位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#O-n-n"><span class="nav-number">1.0.6.</span> <span class="nav-text">O(n*n)</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
