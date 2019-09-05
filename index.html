@@ -229,6 +229,260 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/05/insertSort/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ChenHui">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/05/insertSort/" itemprop="url">insertSort</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-05T15:26:40+08:00">
+                2019-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><h2 id="1-第一个元素默认是已排序元素，取出下个元素和当前元素比较"><a href="#1-第一个元素默认是已排序元素，取出下个元素和当前元素比较" class="headerlink" title="1.第一个元素默认是已排序元素，取出下个元素和当前元素比较"></a>1.第一个元素默认是已排序元素，取出下个元素和当前元素比较</h2><h2 id="如果当前元素大就交换位置，那么此时第一个元素就是当前最小数"><a href="#如果当前元素大就交换位置，那么此时第一个元素就是当前最小数" class="headerlink" title="如果当前元素大就交换位置，那么此时第一个元素就是当前最小数"></a>如果当前元素大就交换位置，那么此时第一个元素就是当前最小数</h2><h2 id="2-下次取出操作从第三个元素开始对，向前对比，重复之前的操作"><a href="#2-下次取出操作从第三个元素开始对，向前对比，重复之前的操作" class="headerlink" title="2.下次取出操作从第三个元素开始对，向前对比，重复之前的操作"></a>2.下次取出操作从第三个元素开始对，向前对比，重复之前的操作</h2><pre><code>function insertSort(array){
+    for(let i = 1; i &lt; array.length; i++){
+        for(let j = i-1; j &gt;= 0 &amp;&amp; array[j+1] &lt; array [j]; j--){
+            swap(array, j, j+1);
+        }
+    }
+    return array;
+}
+function swap(array, i, j){
+    let temp=0;
+    temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+}
+let array = [0,60,45,37,5,48,15,37,26,29,2,46,4,17,50,52];
+console.log(insertSort(array));
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/05/InsertSort-0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ChenHui">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/09/05/InsertSort-0/" itemprop="url">InsertSort</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-05T10:26:43+08:00">
+                2019-09-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/07/18/ReverseList/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -825,7 +1079,7 @@ public static void swap(int[] arr, int i, int j) {
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
