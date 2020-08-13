@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next mist use-motion" lang="">
+<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -83,7 +83,7 @@
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 
@@ -95,13 +95,13 @@
     root: '/',
     scheme: 'Mist',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
-      author: 'Author'
+      author: '博主'
     },
     algolia: {
       applicationID: '',
@@ -133,7 +133,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   
   
@@ -182,7 +182,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
           </a>
         </li>
       
@@ -192,7 +202,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
           </a>
         </li>
       
@@ -229,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/12/1/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/12/测试/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ChenHui">
@@ -248,7 +268,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2020/08/12/1/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2020/08/12/测试/" itemprop="url">测试</a></h1>
         
 
         <div class="post-meta">
@@ -258,9 +278,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-12T22:38:34+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-12T15:26:40+08:00">
                 2020-08-12
               </time>
             
@@ -300,7 +320,7 @@
       
         
           
-            <p>function insertSort(array){<br>        for(let i = 1; i &lt; array.length; i++){<br>            for(let j = i-1; j &gt;= 0 &amp;&amp; array[j+1] &lt; array [j]; j–){<br>                swap(array, j, j+1);<br>            }<br>        }<br>        return array;<br>}<br>function swap(array, i, j){<br>        let temp=0;<br>        temp = array[i];<br>        array[i] = array[j];<br>        array[j] = temp;<br>}<br>let array = [0,60,45,37,5,48,15,37,26,29,2,46,4,17,50,52];<br>console.log(insertSort(array));</p>
+            <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">function <span class="title">insertSort</span><span class="params">(array)</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(let i = <span class="number">1</span>; i &lt; array.length; i++)&#123;</span><br><span class="line">			<span class="keyword">for</span>(let j = i-<span class="number">1</span>; j &gt;= <span class="number">0</span> &amp;&amp; array[j+<span class="number">1</span>] &lt; array [j]; j--)&#123;</span><br><span class="line">				swap(array, j, j+<span class="number">1</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">function <span class="title">swap</span><span class="params">(array, i, j)</span></span>&#123;</span><br><span class="line">		let temp=<span class="number">0</span>;</span><br><span class="line">		temp = array[i];</span><br><span class="line">		array[i] = array[j];</span><br><span class="line">		array[j] = temp;</span><br><span class="line">&#125;</span><br><span class="line">let array = [<span class="number">0</span>,<span class="number">60</span>,<span class="number">45</span>,<span class="number">37</span>,<span class="number">5</span>,<span class="number">48</span>,<span class="number">15</span>,<span class="number">37</span>,<span class="number">26</span>,<span class="number">29</span>,<span class="number">2</span>,<span class="number">46</span>,<span class="number">4</span>,<span class="number">17</span>,<span class="number">50</span>,<span class="number">52</span>];</span><br><span class="line">console.log(insertSort(array));</span><br></pre></td></tr></table></figure>
 
           
         
@@ -378,9 +398,9 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-05T15:26:40+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-05T15:26:40+08:00">
                 2019-09-05
               </time>
             
@@ -420,23 +440,8 @@
       
         
           
-            <h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><h2 id="1-第一个元素默认是已排序元素，取出下个元素和当前元素比较"><a href="#1-第一个元素默认是已排序元素，取出下个元素和当前元素比较" class="headerlink" title="1.第一个元素默认是已排序元素，取出下个元素和当前元素比较"></a>1.第一个元素默认是已排序元素，取出下个元素和当前元素比较</h2><h2 id="如果当前元素大就交换位置，那么此时第一个元素就是当前最小数"><a href="#如果当前元素大就交换位置，那么此时第一个元素就是当前最小数" class="headerlink" title="如果当前元素大就交换位置，那么此时第一个元素就是当前最小数"></a>如果当前元素大就交换位置，那么此时第一个元素就是当前最小数</h2><h2 id="2-下次取出操作从第三个元素开始对，向前对比，重复之前的操作"><a href="#2-下次取出操作从第三个元素开始对，向前对比，重复之前的操作" class="headerlink" title="2.下次取出操作从第三个元素开始对，向前对比，重复之前的操作"></a>2.下次取出操作从第三个元素开始对，向前对比，重复之前的操作</h2><pre><code>function insertSort(array){
-    for(let i = 1; i &lt; array.length; i++){
-        for(let j = i-1; j &gt;= 0 &amp;&amp; array[j+1] &lt; array [j]; j--){
-            swap(array, j, j+1);
-        }
-    }
-    return array;
-}
-function swap(array, i, j){
-    let temp=0;
-    temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-}
-let array = [0,60,45,37,5,48,15,37,26,29,2,46,4,17,50,52];
-console.log(insertSort(array));
-</code></pre>
+            <h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><h2 id="1-第一个元素默认是已排序元素，取出下个元素和当前元素比较"><a href="#1-第一个元素默认是已排序元素，取出下个元素和当前元素比较" class="headerlink" title="1.第一个元素默认是已排序元素，取出下个元素和当前元素比较"></a>1.第一个元素默认是已排序元素，取出下个元素和当前元素比较</h2><h2 id="如果当前元素大就交换位置，那么此时第一个元素就是当前最小数"><a href="#如果当前元素大就交换位置，那么此时第一个元素就是当前最小数" class="headerlink" title="如果当前元素大就交换位置，那么此时第一个元素就是当前最小数"></a>如果当前元素大就交换位置，那么此时第一个元素就是当前最小数</h2><h2 id="2-下次取出操作从第三个元素开始对，向前对比，重复之前的操作"><a href="#2-下次取出操作从第三个元素开始对，向前对比，重复之前的操作" class="headerlink" title="2.下次取出操作从第三个元素开始对，向前对比，重复之前的操作"></a>2.下次取出操作从第三个元素开始对，向前对比，重复之前的操作</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">function <span class="title">insertSort</span><span class="params">(array)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(let i = <span class="number">1</span>; i &lt; array.length; i++)&#123;</span><br><span class="line">		<span class="keyword">for</span>(let j = i-<span class="number">1</span>; j &gt;= <span class="number">0</span> &amp;&amp; array[j+<span class="number">1</span>] &lt; array [j]; j--)&#123;</span><br><span class="line">			swap(array, j, j+<span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">function <span class="title">swap</span><span class="params">(array, i, j)</span></span>&#123;</span><br><span class="line">	let temp=<span class="number">0</span>;</span><br><span class="line">	temp = array[i];</span><br><span class="line">	array[i] = array[j];</span><br><span class="line">	array[j] = temp;</span><br><span class="line">&#125;</span><br><span class="line">let array = [<span class="number">0</span>,<span class="number">60</span>,<span class="number">45</span>,<span class="number">37</span>,<span class="number">5</span>,<span class="number">48</span>,<span class="number">15</span>,<span class="number">37</span>,<span class="number">26</span>,<span class="number">29</span>,<span class="number">2</span>,<span class="number">46</span>,<span class="number">4</span>,<span class="number">17</span>,<span class="number">50</span>,<span class="number">52</span>];</span><br><span class="line">console.log(insertSort(array));</span><br></pre></td></tr></table></figure>
+
           
         
       
@@ -513,9 +518,9 @@ console.log(insertSort(array));
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-05T10:31:34+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-05T10:31:34+08:00">
                 2019-09-05
               </time>
             
@@ -555,43 +560,7 @@ console.log(insertSort(array));
       
         
           
-            <h1 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h1><h3 id="1-递归的将数组两两分开直到最多包含两个元素，然后将数组排序合并，最终合并为排序好的数组"><a href="#1-递归的将数组两两分开直到最多包含两个元素，然后将数组排序合并，最终合并为排序好的数组" class="headerlink" title="1.递归的将数组两两分开直到最多包含两个元素，然后将数组排序合并，最终合并为排序好的数组"></a>1.递归的将数组两两分开直到最多包含两个元素，然后将数组排序合并，最终合并为排序好的数组</h3><pre><code>function sort(array) {
-      mergeSort(array, 0, array.length - 1);
-      return array;
-}
-
-function mergeSort(array, left, right) {
-      // 左右索引相同说明已经只有一个数
-      if (left === right) return;
-      // 等同于 `left + (right - left) / 2`
-      // 相比 `(left + right) / 2` 来说更加安全，不会溢出
-      // 使用位运算是因为位运算比四则运算快
-      let mid = parseInt(left + ((right - left) &gt;&gt; 1));
-      mergeSort(array, left, mid);
-      mergeSort(array, mid + 1, right);
-
-      let help = [];
-      let i = 0;
-      let p1 = left;
-      let p2 = mid + 1;
-      while (p1 &lt;= mid &amp;&amp; p2 &lt;= right) {
-        help[i++] = array[p1] &lt; array[p2] ? array[p1++] : array[p2++];
-      }
-      while (p1 &lt;= mid) {
-        help[i++] = array[p1++];
-      }
-      while (p2 &lt;= right) {
-        help[i++] = array[p2++];
-      }
-      for (let i = 0; i &lt; help.length; i++) {
-        array[left + i] = help[i];
-      }
-      return array;
-}
-
-let array=[60,45,37,5,48,15,37,26,29,2,46,4,17,50,52];//调用排序算法 
-console.log(sort(array));
-</code></pre>
+            <h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><h3 id="1-递归的将数组两两分开直到最多包含两个元素，然后将数组排序合并，最终合并为排序好的数组"><a href="#1-递归的将数组两两分开直到最多包含两个元素，然后将数组排序合并，最终合并为排序好的数组" class="headerlink" title="1.递归的将数组两两分开直到最多包含两个元素，然后将数组排序合并，最终合并为排序好的数组"></a>1.递归的将数组两两分开直到最多包含两个元素，然后将数组排序合并，最终合并为排序好的数组</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">function <span class="title">sort</span><span class="params">(array)</span> </span>&#123;</span><br><span class="line">	  mergeSort(array, <span class="number">0</span>, array.length - <span class="number">1</span>);</span><br><span class="line">	  <span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">function <span class="title">mergeSort</span><span class="params">(array, left, right)</span> </span>&#123;</span><br><span class="line">	  <span class="comment">// 左右索引相同说明已经只有一个数</span></span><br><span class="line">	  <span class="keyword">if</span> (left === right) <span class="keyword">return</span>;</span><br><span class="line">	  <span class="comment">// 等同于 `left + (right - left) / 2`</span></span><br><span class="line">	  <span class="comment">// 相比 `(left + right) / 2` 来说更加安全，不会溢出</span></span><br><span class="line">	  <span class="comment">// 使用位运算是因为位运算比四则运算快</span></span><br><span class="line">	  let mid = parseInt(left + ((right - left) &gt;&gt; <span class="number">1</span>));</span><br><span class="line">	  mergeSort(array, left, mid);</span><br><span class="line">	  mergeSort(array, mid + <span class="number">1</span>, right);</span><br><span class="line"></span><br><span class="line">	  let help = [];</span><br><span class="line">	  let i = <span class="number">0</span>;</span><br><span class="line">	  let p1 = left;</span><br><span class="line">	  let p2 = mid + <span class="number">1</span>;</span><br><span class="line">	  <span class="keyword">while</span> (p1 &lt;= mid &amp;&amp; p2 &lt;= right) &#123;</span><br><span class="line">	    help[i++] = array[p1] &lt; array[p2] ? array[p1++] : array[p2++];</span><br><span class="line">	  &#125;</span><br><span class="line">	  <span class="keyword">while</span> (p1 &lt;= mid) &#123;</span><br><span class="line">	    help[i++] = array[p1++];</span><br><span class="line">	  &#125;</span><br><span class="line">	  <span class="keyword">while</span> (p2 &lt;= right) &#123;</span><br><span class="line">	    help[i++] = array[p2++];</span><br><span class="line">	  &#125;</span><br><span class="line">	  <span class="keyword">for</span> (let i = <span class="number">0</span>; i &lt; help.length; i++) &#123;</span><br><span class="line">	    array[left + i] = help[i];</span><br><span class="line">	  &#125;</span><br><span class="line">	  <span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let array=[<span class="number">60</span>,<span class="number">45</span>,<span class="number">37</span>,<span class="number">5</span>,<span class="number">48</span>,<span class="number">15</span>,<span class="number">37</span>,<span class="number">26</span>,<span class="number">29</span>,<span class="number">2</span>,<span class="number">46</span>,<span class="number">4</span>,<span class="number">17</span>,<span class="number">50</span>,<span class="number">52</span>];<span class="comment">//调用排序算法 </span></span><br><span class="line">console.log(sort(array));</span><br></pre></td></tr></table></figure>
           
         
       
@@ -668,9 +637,9 @@ console.log(sort(array));
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-05T10:26:43+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-05T10:26:43+08:00">
                 2019-09-05
               </time>
             
@@ -710,52 +679,7 @@ console.log(sort(array));
       
         
           
-            <h1 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h1><h3 id="随机选取一个数组中的值作为基准值，从左至右取值与基准值对比大小。"><a href="#随机选取一个数组中的值作为基准值，从左至右取值与基准值对比大小。" class="headerlink" title="随机选取一个数组中的值作为基准值，从左至右取值与基准值对比大小。"></a>随机选取一个数组中的值作为基准值，从左至右取值与基准值对比大小。</h3><h3 id="比基准值小的放数组左边，大的放右边，对比完成后将基准值和第一个比基准值大的值交换位置。"><a href="#比基准值小的放数组左边，大的放右边，对比完成后将基准值和第一个比基准值大的值交换位置。" class="headerlink" title="比基准值小的放数组左边，大的放右边，对比完成后将基准值和第一个比基准值大的值交换位置。"></a>比基准值小的放数组左边，大的放右边，对比完成后将基准值和第一个比基准值大的值交换位置。</h3><h3 id="然后将数组以基准值的位置分为两部分，继续递归以上操作。"><a href="#然后将数组以基准值的位置分为两部分，继续递归以上操作。" class="headerlink" title="然后将数组以基准值的位置分为两部分，继续递归以上操作。"></a>然后将数组以基准值的位置分为两部分，继续递归以上操作。</h3><pre><code>function sort(array) {
-  quickSort(array, 0, array.length - 1);
-  return array;
-}
-
-function quickSort(array, left, right) {
-  if (left &lt; right) {
-    swap(array, left, right)
-    // 随机取值，然后和末尾交换，这样做比固定取一个位置的复杂度略低
-    let indexs = part(array, parseInt(Math.random() * (right - left + 1)) + left, right);
-    quickSort(array, left, indexs[0]);
-    quickSort(array, indexs[1] + 1, right);
-  }
-}
-function part(array, left, right) {
-  let less = left - 1;
-  let more = right;
-  while (left &lt; more) {
-    if (array[left] &lt; array[right]) {
-      // 当前值比基准值小，`less` 和 `left` 都加一
-       ++less;
-       ++left;
-    } else if (array[left] &gt; array[right]) {
-      // 当前值比基准值大，将当前值和右边的值交换
-      // 并且不改变 `left`，因为当前换过来的值还没有判断过大小
-      swap(array, --more, left);
-    } else {
-      // 和基准值相同，只移动下标
-      left++;
-    }
-  }
-  // 将基准值和比基准值大的第一个值交换位置
-  // 这样数组就变成 `[比基准值小, 基准值, 比基准值大]`
-  swap(array, right, more);
-  return [less, more];
-}
-function swap(array, i, j){
-    let temp=0;
-    temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-}
-
-let array=[60,45,37,5,48,15,37,26,29,2,46,4,17,50,52];//调用排序算法 
-console.log(sort (array));
-</code></pre>
+            <h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><h3 id="随机选取一个数组中的值作为基准值，从左至右取值与基准值对比大小。"><a href="#随机选取一个数组中的值作为基准值，从左至右取值与基准值对比大小。" class="headerlink" title="随机选取一个数组中的值作为基准值，从左至右取值与基准值对比大小。"></a>随机选取一个数组中的值作为基准值，从左至右取值与基准值对比大小。</h3><h3 id="比基准值小的放数组左边，大的放右边，对比完成后将基准值和第一个比基准值大的值交换位置。"><a href="#比基准值小的放数组左边，大的放右边，对比完成后将基准值和第一个比基准值大的值交换位置。" class="headerlink" title="比基准值小的放数组左边，大的放右边，对比完成后将基准值和第一个比基准值大的值交换位置。"></a>比基准值小的放数组左边，大的放右边，对比完成后将基准值和第一个比基准值大的值交换位置。</h3><h3 id="然后将数组以基准值的位置分为两部分，继续递归以上操作。"><a href="#然后将数组以基准值的位置分为两部分，继续递归以上操作。" class="headerlink" title="然后将数组以基准值的位置分为两部分，继续递归以上操作。"></a>然后将数组以基准值的位置分为两部分，继续递归以上操作。</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">function <span class="title">sort</span><span class="params">(array)</span> </span>&#123;</span><br><span class="line">  quickSort(array, <span class="number">0</span>, array.length - <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">function <span class="title">quickSort</span><span class="params">(array, left, right)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (left &lt; right) &#123;</span><br><span class="line">    swap(array, left, right)</span><br><span class="line">    <span class="comment">// 随机取值，然后和末尾交换，这样做比固定取一个位置的复杂度略低</span></span><br><span class="line">    let indexs = part(array, parseInt(Math.random() * (right - left + <span class="number">1</span>)) + left, right);</span><br><span class="line">    quickSort(array, left, indexs[<span class="number">0</span>]);</span><br><span class="line">    quickSort(array, indexs[<span class="number">1</span>] + <span class="number">1</span>, right);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">function <span class="title">part</span><span class="params">(array, left, right)</span> </span>&#123;</span><br><span class="line">  let less = left - <span class="number">1</span>;</span><br><span class="line">  let more = right;</span><br><span class="line">  <span class="keyword">while</span> (left &lt; more) &#123;</span><br><span class="line">    <span class="keyword">if</span> (array[left] &lt; array[right]) &#123;</span><br><span class="line">      <span class="comment">// 当前值比基准值小，`less` 和 `left` 都加一</span></span><br><span class="line">	   ++less;</span><br><span class="line">       ++left;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (array[left] &gt; array[right]) &#123;</span><br><span class="line">      <span class="comment">// 当前值比基准值大，将当前值和右边的值交换</span></span><br><span class="line">      <span class="comment">// 并且不改变 `left`，因为当前换过来的值还没有判断过大小</span></span><br><span class="line">      swap(array, --more, left);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 和基准值相同，只移动下标</span></span><br><span class="line">      left++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 将基准值和比基准值大的第一个值交换位置</span></span><br><span class="line">  <span class="comment">// 这样数组就变成 `[比基准值小, 基准值, 比基准值大]`</span></span><br><span class="line">  swap(array, right, more);</span><br><span class="line">  <span class="keyword">return</span> [less, more];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">function <span class="title">swap</span><span class="params">(array, i, j)</span></span>&#123;</span><br><span class="line">	let temp=<span class="number">0</span>;</span><br><span class="line">	temp = array[i];</span><br><span class="line">	array[i] = array[j];</span><br><span class="line">	array[j] = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let array=[<span class="number">60</span>,<span class="number">45</span>,<span class="number">37</span>,<span class="number">5</span>,<span class="number">48</span>,<span class="number">15</span>,<span class="number">37</span>,<span class="number">26</span>,<span class="number">29</span>,<span class="number">2</span>,<span class="number">46</span>,<span class="number">4</span>,<span class="number">17</span>,<span class="number">50</span>,<span class="number">52</span>];<span class="comment">//调用排序算法 </span></span><br><span class="line">console.log(sort (array));</span><br></pre></td></tr></table></figure>
           
         
       
@@ -832,9 +756,9 @@ console.log(sort (array));
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-05T10:26:43+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-09-05T10:26:43+08:00">
                 2019-09-05
               </time>
             
@@ -874,28 +798,7 @@ console.log(sort (array));
       
         
           
-            <p>#选择排序</p>
-<h3 id="1-遍历数组，设置最小值的索引为0，如取出值比当前最小值小，就替换最小值索引，"><a href="#1-遍历数组，设置最小值的索引为0，如取出值比当前最小值小，就替换最小值索引，" class="headerlink" title="1.遍历数组，设置最小值的索引为0，如取出值比当前最小值小，就替换最小值索引，"></a>1.遍历数组，设置最小值的索引为0，如取出值比当前最小值小，就替换最小值索引，</h3><h3 id="遍历完后，将第一个元素和最小值索引上的值替换"><a href="#遍历完后，将第一个元素和最小值索引上的值替换" class="headerlink" title="遍历完后，将第一个元素和最小值索引上的值替换"></a>遍历完后，将第一个元素和最小值索引上的值替换</h3><h3 id="2-下次遍历从索引1开始重复上述操作"><a href="#2-下次遍历从索引1开始重复上述操作" class="headerlink" title="2.下次遍历从索引1开始重复上述操作"></a>2.下次遍历从索引1开始重复上述操作</h3><h3 id="O-n-n"><a href="#O-n-n" class="headerlink" title="O(n*n)"></a>O(n*n)</h3><pre><code>function selectionSort(array){
-    for(let i = 0; i &lt; array.length-1; i++){
-        let minIndex = i;
-        for(let j = i+1; j &lt; array.length; j++){
-            minIndex = (array[j] &lt; array[minIndex])? j : minIndex;
-        }
-        swap(array, i, minIndex);
-    }
-    return array;
-}
-
-function swap(array, i, j){
-    let temp=0;
-    temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-}
-
-let array=[60,45,37,5,48,15,37,26,29,2,46,4,17,50,52];//调用排序算法 
-console.log(selectionSort (array));
-</code></pre>
+            <h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><h3 id="1-遍历数组，设置最小值的索引为0，如取出值比当前最小值小，就替换最小值索引，"><a href="#1-遍历数组，设置最小值的索引为0，如取出值比当前最小值小，就替换最小值索引，" class="headerlink" title="1.遍历数组，设置最小值的索引为0，如取出值比当前最小值小，就替换最小值索引，"></a>1.遍历数组，设置最小值的索引为0，如取出值比当前最小值小，就替换最小值索引，</h3><h3 id="遍历完后，将第一个元素和最小值索引上的值替换"><a href="#遍历完后，将第一个元素和最小值索引上的值替换" class="headerlink" title="遍历完后，将第一个元素和最小值索引上的值替换"></a>遍历完后，将第一个元素和最小值索引上的值替换</h3><h3 id="2-下次遍历从索引1开始重复上述操作"><a href="#2-下次遍历从索引1开始重复上述操作" class="headerlink" title="2.下次遍历从索引1开始重复上述操作"></a>2.下次遍历从索引1开始重复上述操作</h3><h3 id="O-n-n"><a href="#O-n-n" class="headerlink" title="O(n*n)"></a>O(n*n)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">function <span class="title">selectionSort</span><span class="params">(array)</span></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(let i = <span class="number">0</span>; i &lt; array.length-<span class="number">1</span>; i++)&#123;</span><br><span class="line">		let minIndex = i;</span><br><span class="line">		<span class="keyword">for</span>(let j = i+<span class="number">1</span>; j &lt; array.length; j++)&#123;</span><br><span class="line">			minIndex = (array[j] &lt; array[minIndex])? j : minIndex;</span><br><span class="line">		&#125;</span><br><span class="line">		swap(array, i, minIndex);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">function <span class="title">swap</span><span class="params">(array, i, j)</span></span>&#123;</span><br><span class="line">	let temp=<span class="number">0</span>;</span><br><span class="line">	temp = array[i];</span><br><span class="line">	array[i] = array[j];</span><br><span class="line">	array[j] = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let array=[<span class="number">60</span>,<span class="number">45</span>,<span class="number">37</span>,<span class="number">5</span>,<span class="number">48</span>,<span class="number">15</span>,<span class="number">37</span>,<span class="number">26</span>,<span class="number">29</span>,<span class="number">2</span>,<span class="number">46</span>,<span class="number">4</span>,<span class="number">17</span>,<span class="number">50</span>,<span class="number">52</span>];<span class="comment">//调用排序算法 </span></span><br><span class="line">console.log(selectionSort (array));</span><br></pre></td></tr></table></figure>
           
         
       
@@ -972,9 +875,9 @@ console.log(selectionSort (array));
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-18T20:02:03+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-18T20:02:03+08:00">
                 2019-07-18
               </time>
             
@@ -1014,23 +917,7 @@ console.log(selectionSort (array));
       
         
           
-            <h1 id="反转链表"><a href="#反转链表" class="headerlink" title="反转链表"></a>反转链表</h1><h2 id="输入一个链表，反转链表后，输出新链表的表头。"><a href="#输入一个链表，反转链表后，输出新链表的表头。" class="headerlink" title="输入一个链表，反转链表后，输出新链表的表头。"></a>输入一个链表，反转链表后，输出新链表的表头。</h2><p>public class Solution {</p>
-<pre><code>public ListNode ReverseList(ListNode head) {
-   if(head == null){
-       return null;
-   }
-   ListNode pre = null;
-   ListNode next = null;
-   while(head != null){
-      next = head.next;//让next引用指向head下一个节点，
-      head.next = pre;//pre始终指向当前head的前一个节点，这样可以反转节点了。
-      pre = head;
-      head = next;
-   }
-   return pre;
-}
-</code></pre><p>}</p>
-
+            <h2 id="反转链表"><a href="#反转链表" class="headerlink" title="反转链表"></a>反转链表</h2><h2 id="输入一个链表，反转链表后，输出新链表的表头。"><a href="#输入一个链表，反转链表后，输出新链表的表头。" class="headerlink" title="输入一个链表，反转链表后，输出新链表的表头。"></a>输入一个链表，反转链表后，输出新链表的表头。</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">ReverseList</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(head == <span class="keyword">null</span>)&#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       ListNode pre = <span class="keyword">null</span>;</span><br><span class="line">       ListNode next = <span class="keyword">null</span>;</span><br><span class="line">       <span class="keyword">while</span>(head != <span class="keyword">null</span>)&#123;</span><br><span class="line">          next = head.next;<span class="comment">//让next引用指向head下一个节点，</span></span><br><span class="line">          head.next = pre;<span class="comment">//pre始终指向当前head的前一个节点，这样可以反转节点了。</span></span><br><span class="line">          pre = head;</span><br><span class="line">          head = next;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> pre;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
           
         
       
@@ -1107,9 +994,9 @@ console.log(selectionSort (array));
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-18T16:15:34+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-18T16:15:34+08:00">
                 2019-07-18
               </time>
             
@@ -1149,50 +1036,7 @@ console.log(selectionSort (array));
       
         
           
-            <h1 id="顺时针打印矩阵"><a href="#顺时针打印矩阵" class="headerlink" title="顺时针打印矩阵"></a>顺时针打印矩阵</h1><h2 id="输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4-X-4矩阵：-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-则依次打印出数字1-2-3-4-8-12-16-15-14-13-9-5-6-7-11-10"><a href="#输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4-X-4矩阵：-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-则依次打印出数字1-2-3-4-8-12-16-15-14-13-9-5-6-7-11-10" class="headerlink" title="输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10."></a>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.</h2><p>import java.util.ArrayList;<br>public class Solution {</p>
-<pre><code>public ArrayList&lt;Integer&gt; printMatrix(int [][] matrix) {
-    int tR = 0;
-    int tC = 0;
-    int dR = matrix.length - 1;
-    int dC = matrix[0].length - 1;
-    ArrayList&lt;Integer&gt; list = new ArrayList&lt;Integer&gt;();
-    while(tR &lt;= dR &amp;&amp; tC &lt;= dC){
-         if(tR == dR){
-             for(int i = tC; i&lt;= dC; i++){
-                 list.add( matrix[tR][i]);
-             }
-         }else if(tC == dC){
-             for(int i = tR; i&lt;= dR; i++){
-                  list.add( matrix[i][tC]);
-             }
-         }else{
-             int curC = tC;
-             int curR = tR;
-             while (curC != dC){
-                  list.add( matrix[tR][curC]);
-                 curC++;
-             }
-             while (curR != dR) {
-                 list.add( matrix[curR][dC]);
-                curR++;
-            }
-             while (curC != tC) {
-                 list.add( matrix[dR][curC]);
-                curC--;
-            }
-             while (curR != tR) {
-                 list.add( matrix[curR][tC]);
-                curR--;
-            }
-         }
-            tR++;
-            dR--; 
-            tC++;            
-            dC--;
-        }
-    return list;
-}
-</code></pre><p>}</p>
+            <h2 id="顺时针打印矩阵"><a href="#顺时针打印矩阵" class="headerlink" title="顺时针打印矩阵"></a>顺时针打印矩阵</h2><h2 id="输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4-X-4矩阵：-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-则依次打印出数字1-2-3-4-8-12-16-15-14-13-9-5-6-7-11-10"><a href="#输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4-X-4矩阵：-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-则依次打印出数字1-2-3-4-8-12-16-15-14-13-9-5-6-7-11-10" class="headerlink" title="输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10."></a>输入一个矩阵，按照从外向里以顺时针的顺序依次打印出每一个数字，例如，如果输入如下4 X 4矩阵： 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 则依次打印出数字1,2,3,4,8,12,16,15,14,13,9,5,6,7,11,10.</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ArrayList&lt;Integer&gt; <span class="title">printMatrix</span><span class="params">(<span class="keyword">int</span> [][] matrix)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> tR = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> tC = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> dR = matrix.length - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> dC = matrix[<span class="number">0</span>].length - <span class="number">1</span>;</span><br><span class="line">        ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">        <span class="keyword">while</span>(tR &lt;= dR &amp;&amp; tC &lt;= dC)&#123;</span><br><span class="line">             <span class="keyword">if</span>(tR == dR)&#123;</span><br><span class="line">                 <span class="keyword">for</span>(<span class="keyword">int</span> i = tC; i&lt;= dC; i++)&#123;</span><br><span class="line">                     list.add( matrix[tR][i]);</span><br><span class="line">                 &#125;</span><br><span class="line">             &#125;<span class="keyword">else</span> <span class="keyword">if</span>(tC == dC)&#123;</span><br><span class="line">                 <span class="keyword">for</span>(<span class="keyword">int</span> i = tR; i&lt;= dR; i++)&#123;</span><br><span class="line">                      list.add( matrix[i][tC]);</span><br><span class="line">                 &#125;</span><br><span class="line">             &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                 <span class="keyword">int</span> curC = tC;</span><br><span class="line">                 <span class="keyword">int</span> curR = tR;</span><br><span class="line">                 <span class="keyword">while</span> (curC != dC)&#123;</span><br><span class="line">                      list.add( matrix[tR][curC]);</span><br><span class="line">                     curC++;</span><br><span class="line">                 &#125;</span><br><span class="line">                 <span class="keyword">while</span> (curR != dR) &#123;</span><br><span class="line">                     list.add( matrix[curR][dC]);</span><br><span class="line">                    curR++;</span><br><span class="line">                &#125;</span><br><span class="line">                 <span class="keyword">while</span> (curC != tC) &#123;</span><br><span class="line">                     list.add( matrix[dR][curC]);</span><br><span class="line">                    curC--;</span><br><span class="line">                &#125;</span><br><span class="line">                 <span class="keyword">while</span> (curR != tR) &#123;</span><br><span class="line">                     list.add( matrix[curR][tC]);</span><br><span class="line">                    curR--;</span><br><span class="line">                &#125;</span><br><span class="line">             &#125;</span><br><span class="line">                tR++;</span><br><span class="line">                dR--; </span><br><span class="line">                tC++;            </span><br><span class="line">                dC--;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> list;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1270,9 +1114,9 @@ console.log(selectionSort (array));
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">发表于</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-16T15:26:40+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-16T15:26:40+08:00">
                 2019-07-16
               </time>
             
@@ -1312,171 +1156,7 @@ console.log(selectionSort (array));
       
         
           
-            <h1 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h1><h3 id="1-从第一个元素开始，把当前元素和下一个索引元素进行比较。"><a href="#1-从第一个元素开始，把当前元素和下一个索引元素进行比较。" class="headerlink" title="1,从第一个元素开始，把当前元素和下一个索引元素进行比较。"></a>1,从第一个元素开始，把当前元素和下一个索引元素进行比较。</h3><h3 id="2-如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，"><a href="#2-如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，" class="headerlink" title="2,如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，"></a>2,如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，</h3><h3 id="那么此时最后一个元素就是该数组中最大的数。"><a href="#那么此时最后一个元素就是该数组中最大的数。" class="headerlink" title="那么此时最后一个元素就是该数组中最大的数。"></a>那么此时最后一个元素就是该数组中最大的数。</h3><h3 id="3-下一轮重复以上操作，但是此时最后一个元素已经是最大数了，"><a href="#3-下一轮重复以上操作，但是此时最后一个元素已经是最大数了，" class="headerlink" title="3,下一轮重复以上操作，但是此时最后一个元素已经是最大数了，"></a>3,下一轮重复以上操作，但是此时最后一个元素已经是最大数了，</h3><h3 id="所以不需要再比较最后一个元素，只需要比较到-length-1-的位置"><a href="#所以不需要再比较最后一个元素，只需要比较到-length-1-的位置" class="headerlink" title="所以不需要再比较最后一个元素，只需要比较到 length - 1 的位置"></a>所以不需要再比较最后一个元素，只需要比较到 length - 1 的位置</h3><h3 id="O-n-n"><a href="#O-n-n" class="headerlink" title="O(n*n)"></a>O(n*n)</h3><pre><code>public static void bubbleSort(int[] arr) {
-    if (arr == null || arr.length &lt; 2) {
-        return;
-    }
-    for (int e = arr.length - 1; e &gt; 0; e--) {
-        for (int i = 0; i &lt; e; i++) {
-            if (arr[i] &gt; arr[i + 1]) {
-                swap(arr, i, i + 1);
-            }
-        }
-    }
-}
-public static void swap(int[] arr, int i, int j) {
-    arr[i] = arr[i] ^ arr[j];
-    arr[j] = arr[i] ^ arr[j];
-    arr[i] = arr[i] ^ arr[j];
-}
-
-
-function bubbleSort(array){
-for(let i=array.length; i&gt;0; i--){
-    for(let j=0; j&lt;i-1; j++){
-        if(array[j] &gt; array[j+1]){
-            swap(array, j, j+1);
-        }
-    }
-}
-return array;
-}
-function swap(array, i, j){
-    let temp=0;
-    temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-}
-let array=[60,45,37,5,48,15,37,26,29,2,46,4,17,50,52];//调用排序算法 
-console.log(bubbleSort(array));
-</code></pre>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/02/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ChenHui">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/02/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-02T15:02:04+08:00">
-                2018-09-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><h3 id="1-从第一个元素开始，把当前元素和下一个索引元素进行比较。"><a href="#1-从第一个元素开始，把当前元素和下一个索引元素进行比较。" class="headerlink" title="1,从第一个元素开始，把当前元素和下一个索引元素进行比较。"></a>1,从第一个元素开始，把当前元素和下一个索引元素进行比较。</h3><h3 id="2-如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，"><a href="#2-如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，" class="headerlink" title="2,如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，"></a>2,如果当前元素大，那么就交换位置，重复操作直到比较到最后一个元素，</h3><h3 id="那么此时最后一个元素就是该数组中最大的数。"><a href="#那么此时最后一个元素就是该数组中最大的数。" class="headerlink" title="那么此时最后一个元素就是该数组中最大的数。"></a>那么此时最后一个元素就是该数组中最大的数。</h3><h3 id="3-下一轮重复以上操作，但是此时最后一个元素已经是最大数了，"><a href="#3-下一轮重复以上操作，但是此时最后一个元素已经是最大数了，" class="headerlink" title="3,下一轮重复以上操作，但是此时最后一个元素已经是最大数了，"></a>3,下一轮重复以上操作，但是此时最后一个元素已经是最大数了，</h3><h3 id="所以不需要再比较最后一个元素，只需要比较到-length-1-的位置"><a href="#所以不需要再比较最后一个元素，只需要比较到-length-1-的位置" class="headerlink" title="所以不需要再比较最后一个元素，只需要比较到 length - 1 的位置"></a>所以不需要再比较最后一个元素，只需要比较到 length - 1 的位置</h3><h3 id="O-n-n"><a href="#O-n-n" class="headerlink" title="O(n*n)"></a>O(n*n)</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (arr == <span class="keyword">null</span> || arr.length &lt; <span class="number">2</span>) &#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> e = arr.length - <span class="number">1</span>; e &gt; <span class="number">0</span>; e--) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; e; i++) &#123;</span><br><span class="line">			<span class="keyword">if</span> (arr[i] &gt; arr[i + <span class="number">1</span>]) &#123;</span><br><span class="line">				swap(arr, i, i + <span class="number">1</span>);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span> i, <span class="keyword">int</span> j)</span> </span>&#123;</span><br><span class="line">	arr[i] = arr[i] ^ arr[j];</span><br><span class="line">	arr[j] = arr[i] ^ arr[j];</span><br><span class="line">	arr[i] = arr[i] ^ arr[j];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">function <span class="title">bubbleSort</span><span class="params">(array)</span></span>&#123;</span><br><span class="line"><span class="keyword">for</span>(let i=array.length; i&gt;<span class="number">0</span>; i--)&#123;</span><br><span class="line">	<span class="keyword">for</span>(let j=<span class="number">0</span>; j&lt;i-<span class="number">1</span>; j++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(array[j] &gt; array[j+<span class="number">1</span>])&#123;</span><br><span class="line">			swap(array, j, j+<span class="number">1</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> array;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">function <span class="title">swap</span><span class="params">(array, i, j)</span></span>&#123;</span><br><span class="line">	let temp=<span class="number">0</span>;</span><br><span class="line">	temp = array[i];</span><br><span class="line">	array[i] = array[j];</span><br><span class="line">	array[j] = temp;</span><br><span class="line">&#125;</span><br><span class="line">let array=[<span class="number">60</span>,<span class="number">45</span>,<span class="number">37</span>,<span class="number">5</span>,<span class="number">48</span>,<span class="number">15</span>,<span class="number">37</span>,<span class="number">26</span>,<span class="number">29</span>,<span class="number">2</span>,<span class="number">46</span>,<span class="number">4</span>,<span class="number">17</span>,<span class="number">50</span>,<span class="number">52</span>];<span class="comment">//调用排序算法 </span></span><br><span class="line">console.log(bubbleSort(array));</span><br></pre></td></tr></table></figure>
 
           
         
@@ -1558,14 +1238,23 @@ console.log(bubbleSort(array));
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
               </div>
             
 
             
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
             
 
           </nav>
@@ -1609,7 +1298,7 @@ console.log(bubbleSort(array));
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
@@ -1617,7 +1306,7 @@ console.log(bubbleSort(array));
 
 
 
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
 
 
